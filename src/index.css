@@ -1,0 +1,1286 @@
+/* Sidebar Style */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #02102c;
+  color: rgb(246, 255, 249);
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden; /* Prevents the scrollbar */
+  font-family: cursive;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 0px;
+  gap: 10px;
+  border-radius: 0px;
+}
+
+.name-heading,
+.name-heading1 {
+  color: #e67e22;
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #e67e22;
+  border-radius: 5px;
+}
+
+/* Sidebar list style */
+.sidebar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list li {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-list li:hover {
+  background-color: #34495e;
+}
+
+.sidebar-list li + li {
+  border-top: 1px solid #7f8c8d;
+}
+
+.sidebar-icon {
+  margin-right: 20px;
+  color: #ecf0f1;
+}
+
+.arrow {
+  font-size: 18px;
+  color: #ecf0f1;
+  margin-left: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px;
+  }
+
+  .sidebar-list li {
+    font-size: 14px;
+  }
+}
+
+/* Navbar Style */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsla(60, 10%, 92%, 0);
+  padding: 10px 20px;
+  color: #f0f2f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left .search-input {
+  padding: 8px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  width: 250px;
+  font-size: 14px;
+  outline: none;
+}
+
+.navbar-left .search-input:focus {
+  border-color: #007bff;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-btn,
+.navbar-btn1 {
+  background-color: orange;
+  border: none;
+  color: #44486d;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-btn1 {
+  background-color: rgb(255, 0, 242);
+}
+
+.navbar-btn:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid orange;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #8A8EA6;
+}
+
+.navbar-icon {
+  font-size: 18px;
+  cursor: pointer;
+  color: #230c80;
+}
+
+.navbar-icon:hover {
+  color: orange;
+}
+
+.navbar-logout {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #e03004;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logout-icon {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.navbar-logout:hover {
+  color: orange;
+}
+
+@media (max-width: 768px) {
+  .user-name {
+    display: none;
+  }
+
+  .navbar-right .navbar-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .navbar-left .search-input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-left .search-input {
+    width: 150px;
+  }
+
+  .navbar-btn,
+  .navbar-btn1 {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
+
+/* Frame Style */
+.frame-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px 0px;
+  gap: 10px;
+  position: absolute;
+  width: 270px;
+  height: 960px;
+  left: 0px;
+  top: 0px;
+  background: #0D1424;
+  border-radius: 0px;
+}
+
+.frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 15px;
+  position: absolute;
+  width: 1575px;
+  height: 64px;
+  left: 295px;
+  top: 89px;
+  background-color: #ffffff;
+}
+
+/* User List Container */
+.user-list-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+  overflow-x: auto;
+  width: 100vw;
+  justify-content: flex-start;
+}
+
+/* User Item Styling */
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: #b40f0f;
+  color: #0F1729;
+  height: 21px;
+  width: 129px;
+}
+
+/* User Image Styling */
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid orange;
+}
+
+/* User Name Styling */
+.user-name {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Vertical Line Between Items */
+.vertical-line {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 1px;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+/* Message Button Styling */
+.message-btn {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Message Icon */
+.message-icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* Arrow Icon */
+.arrow-icon {
+  font-size: 18px;
+}
+
+
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;  /* Space out the navbar items */
+  align-items: center;
+  background-color: hsla(60, 10%, 92%, 0);
+  padding: 10px 20px;
+  color: #f0f2f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure navbar takes full width */
+}
+
+/* Left and Right Sections of the Navbar */
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  width: 100%;  /* Ensure both left and right sections take full width */
+  justify-content: space-between; /* Add space between items inside left and right sections */
+}
+
+.navbar-left {
+  justify-content: flex-start; /* Align items to the left */
+}
+
+.navbar-right {
+  justify-content: flex-end; /* Align items to the right */
+}
+
+/* Button Styling */
+.navbar-btn, .navbar-btn2 {
+  background-color: orange;
+  border: none;
+  color: #44486d;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; /* Optional: Adds space between buttons */
+}
+
+.navbar-btn:hover, .navbar-btn1:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+/* Optional: Adjust button container for full width */
+.navbar-btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* Space out buttons */
+}
+
+
+/*   Card STart  */
+
+/* Card container (to align beside sidebar) */
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px; /* Add space between top of the page and the card */
+}
+
+/* Card styles */
+.card {
+  box-sizing: border-box;
+  position: absolute;
+  width: 450px; /* Set the width of the card */
+  height: 1060px; /* Set the height of the card */
+  left: 295px; /* Adjust the position beside the sidebar */
+  top: 178px; /* Adjust the vertical position */
+  background: #FFFFFF; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+  padding: 20px; /* Padding inside the card */
+}
+
+/* Card header styles */
+.card-header h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-header p {
+  font-size: 16px;
+  color: #44486d;
+  margin: 5px 0;
+}
+
+/* Card body styles */
+.card-body {
+  margin-top: 20px;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: #44486d;
+  margin: 8px 0;
+}
+
+.card-body strong {
+  font-weight: bold;
+}
+
+/* Action buttons inside the card */
+.actions button {
+  
+  color: white;
+  padding: 10px 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #e67e22;
+}
+
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Card will take full width on smaller screens */
+    height: auto; /* Adjust height automatically based on content */
+    left: 0;
+    top: 0;
+  }
+}
+
+
+/* Card page css */
+/* Card container */
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding-left: 320px; /* Adjust based on sidebar width */
+}
+
+/* Card styles */
+.card {
+  box-sizing: border-box;
+  position: absolute;
+  width: 450px;
+  height: 1060px;
+  left: 295px;
+  top: 178px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-left h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.grey-text {
+  color: grey;
+}
+
+.card-header p {
+  font-size: 16px;
+  color: #44486d;
+  margin: 5px 0;
+}
+
+/* Card body styles */
+.card-body {
+  margin-top: 20px;
+}
+
+/* Info rows */
+.info-row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.info-row p {
+  font-size: 14px;
+  color: #44486d;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.three-dots {
+  font-size: 18px;
+  color: #44486d;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  z-index: 100;
+}
+
+.dropdown button {
+  background: transparent;
+  border: none;
+  color: #44486d;
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dropdown button:hover {
+  background-color: #f2f2f2;
+}
+
+.full-width-btn {
+  background-color: #e7e1e1; /* Grey color for Add button */
+  color: white;
+  padding: 12px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.full-width-btn:hover {
+  background-color: #e67e22;
+}
+
+
+
+
+/* /21 */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  height: 1060px;
+  top: 178px;
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-right p {
+  margin: 5px 0;
+}
+
+.card-body {
+  padding-top: 10px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.three-dots {
+  cursor: pointer;
+}
+
+.dropdown {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.full-width-btn .plus-icon {
+  margin-right: 5px;
+}
+
+.actions button {
+  width: 100%;
+  background-color: #026be3d7;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+/* */
+
+.add_color{
+  color: grey;
+}
+
+
+/* Conservation  */
+
+.conversation-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease-in-out;
+}
+
+/* Specific Button Styles */
+.btn-default {
+  background-color: #676B89; /* Gray */
+  color: white;
+}
+
+.btn-free {
+  background-color: #0F8BFD; /* Blue */
+  color: white;
+}
+
+.btn-escalate {
+  background-color: #D74848; /* Red */
+  color: white;
+}
+
+/* Hover Effects */
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+/* Next apage  */
+/* Style for the entire card */
+.case-favorite-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+  border-radius: 0.5rem; /* Rounded corners for the card */
+  padding: 2rem; /* Add padding inside the card */
+  width: 100%; /* Make it responsive */
+  max-width: 400px; /* Limit the card width */
+  margin: auto; /* Center the card */
+}
+
+/* Header style */
+.case-favorite-header {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* Add spacing below the header */
+  text-align: center; /* Center-align the title */
+}
+
+/* Content container inside the card */
+.case-favorite-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Space between elements */
+}
+
+/* Style for each item in the card */
+.case-favorite-item {
+  padding: 1rem;
+  background-color: #f9fafb; /* Light gray background */
+  border-radius: 0.5rem; /* Rounded corners for each item */
+  font-size: 0.875rem; /* Slightly smaller font size */
+  color: #4b5563; /* Text color */
+  text-align: center; /* Center the text */
+}
+
+/* Button style inside the card */
+.case-favorite-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.case-favorite-button:hover {
+  background-color: #e5e7eb; /* Slight gray background on hover */
+}
+
+/* Icon style */
+.case-favorite-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Add space between items */
+.case-favorite-item, .case-favorite-button {
+  margin-bottom: 1rem;
+}
+
+
+/* action Launch btn */
+/* Style for the entire card */
+.action-launcher-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+  border-radius: 0.5rem; /* Rounded corners for the card */
+  padding: 2rem; /* Add padding inside the card */
+  width: 100%; /* Make it responsive */
+  max-width: 450px; /* Limit the card width */
+  margin: auto; /* Center the card */
+}
+
+/* Header style */
+.action-launcher-header {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* Add spacing below the header */
+  text-align: center; /* Center-align the title */
+}
+
+/* Input field style */
+.action-launcher-input {
+  width: 100%;
+  padding-left: 2.5rem; /* Space for the icon */
+  padding-right: 1rem; /* Padding on the right */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  color: #4b5563;
+  outline: none;
+}
+
+.action-launcher-input:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Primary button style (Add Action) */
+.action-launcher-btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #3b82f6; /* Primary blue color */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-launcher-btn-primary:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}
+
+/* Secondary button style (Fee Reversal, Retail Onboarding, Address Update) */
+.action-launcher-btn-secondary {
+  background-color: #f3f4f6; /* Light gray background */
+  color: #3b82f6; /* Primary blue color for text */
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-launcher-btn-secondary:hover {
+  background-color: #e0e7ff; /* Light blue background on hover */
+}
+
+/* Adding some spacing between buttons */
+.action-launcher-btn-primary,
+.action-launcher-btn-secondary {
+  margin-bottom: 1rem;
+}
+
+
+/* Ask Cautra Page */
+
+/* Card styling */
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Heading */
+.card h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* Flex container for buttons (WhatsApp & Greetings) */
+.card .flex-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Button styling for WhatsApp and Greetings */
+.card .flex-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #4b5563; /* Gray text */
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Dropdown arrow icon */
+.card .flex-buttons button .chevron {
+  width: 16px;
+  height: 16px;
+  color: #4b5563;
+}
+
+/* Dropdown menu */
+.card .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 160px;
+  display: none;
+  z-index: 10;
+}
+
+.card .dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card .dropdown-menu ul li {
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  color: #374151; /* Darker text */
+  cursor: pointer;
+}
+
+.card .dropdown-menu ul li:hover {
+  background-color: #f3f4f6;
+}
+
+/* Toggle dropdown visibility when hovering over the parent */
+.card .relative:hover .dropdown-menu {
+  display: block;
+}
+
+/* Greeting Template Section */
+.card .greeting-template {
+  display: none;
+  margin-top: 24px;
+}
+
+.card .greeting-template h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.card .greeting-template .button-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.card .greeting-template .button-group button {
+  padding: 10px 16px;
+  background-color: white;
+  color: #3b82f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card .greeting-template .button-group button:hover {
+  background-color: #f3f4f6;
+}
+
+/* Message input area */
+.card .message-input {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.card .message-input input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+}
+
+.card .message-input button {
+  padding: 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card .message-input button:hover {
+  background-color: #2563eb;
+}
+
+/*  Chat CSS */
+.page-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.conversation-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conversation-section {
+  margin-bottom: 20px;
+}
+
+.conversation-section p {
+  font-size: 16px;
+  color: #333;
+}
+
+.attachment {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.buttons-container h2 {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+.btn-escalate {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.user-info {
+  display: flex;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-details p {
+  margin: 0;
+}
+
+.checkbox-section {
+  margin-top: 20px;
+}
+
+.checkbox-section label {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.message-section {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+}
+
+.file-btn-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.file-btn,
+.send-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.file-btn {
+  background-color: #f1f1f1;
+}
+
+.send-btn {
+  background-color: #2461d9;
+  color: white;
+}
+
+.send-btn i {
+  margin-right: 5px;
+}
+
+.send-btn:hover {
+  background-color: #45a049;
+}
+
+.file-btn:hover {
+  background-color: #ddd;
+}
+
+
+
+.page-container {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.conversation-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.conversation-section {
+  margin-bottom: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info {
+  margin-top: 20px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-details p {
+  margin-left: 10px;
+}
+
+.checkbox-section {
+  margin-top: 20px;
+}
+
+.checkbox-section label {
+  margin-right: 10px;
+}
+
+.message-section {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.message-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.file-btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.send-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-btn i {
+  margin-right: 5px;
+}
+
+.chat-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-select {
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.messages-container {
+  margin-top: 20px;
+}
+
+.message {
+  margin-bottom: 20px;
+}
+
+.message-header {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.message-body {
+  margin-top: 5px;
+}
+
+.message-footer {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.received {
+  background-color: #f1f1f1;
+}
+
+.sent {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+/* Alll */
